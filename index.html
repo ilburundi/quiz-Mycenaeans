@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Micenei: Livelli di Sfida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="menu-livelli">
+            <h1>🏺 Scegli il tuo livello</h1>
+            <p>Metti alla prova la tua conoscenza sui Micenei</p>
+            <div class="area-bottoni-livello">
+                <button class="btn-livello facile" onclick="iniziaQuiz('facile')">Facile</button>
+                <button class="btn-livello medio" onclick="iniziaQuiz('medio')">Medio</button>
+                <button class="btn-livello difficile" onclick="iniziaQuiz('difficile')">Difficile</button>
+            </div>
+        </div>
+
+        <div id="area-gioco" class="nascosto">
+            <div class="timer-container">
+                <div id="timer-bar"></div>
+            </div>
+
+            <div class="scheda-quiz">
+                <div class="info-quiz">
+                    <span id="numero-domanda"></span>
+                    <span id="tempo-rimanente"></span>
+                </div>
+                <h2 id="testo-domanda"></h2>
+                <div id="opzioni-risposta"></div>
+            </div>
+        </div>
+
+        <div id="schermata-finale" class="nascosto">
+            <h1>🏆 Risultati Finali</h1>
+            <p class="punteggio-grande">Punteggio: <span id="punteggio-testo"></span></p>
+            
+            <div id="sezione-correzioni" class="nascosto">
+                <h3>Correzione Errori:</h3>
+                <div id="lista-errori"></div>
+            </div>
+
+            <button class="btn-reset" onclick="location.reload()">Torna al Menu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
